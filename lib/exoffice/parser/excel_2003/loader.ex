@@ -84,7 +84,7 @@ defmodule Exoffice.Parser.Excel2003.Loader do
     }
   end
 
-  defp parse_sheets(%__MODULE__{sst_tid: sst_tid} = loader, excel, sheet) do
+  def parse_sheets(%__MODULE__{sst_tid: sst_tid} = loader, excel, sheet) do
     sheets = if is_nil(sheet), do: excel.sheets, else: [Enum.at(excel.sheets, sheet)]
 
     pids =
