@@ -56,7 +56,7 @@ defmodule Exoffice.Parser.Excel2003.Loader do
     end
   end
 
-  defp get_stream(ole) do
+  def get_stream(ole) do
     [data, summary_information, document_summary_information] =
       Enum.map(
         [
