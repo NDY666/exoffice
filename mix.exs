@@ -40,7 +40,8 @@ defmodule Exoffice.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:xlsxir, "~> 1.6"},
+      #{:xlsxir, "~> 1.6"},
+      {:xlsxir, git: "https://github.com/NDY666/xlsxir.git", branch: "master"},
       {:csv, "~> 2.1"},
       {:ex_doc, "~> 0.19.1", only: [:dev, :test]},
       {:earmark, "~> 1.0"},
