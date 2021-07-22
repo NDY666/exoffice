@@ -49,7 +49,7 @@ defmodule Exoffice.Parser.Excel2003 do
 
   """
   def count_rows(pid) do
-    Xlsxir.get_multi_info(pid, :rows)
+    Xlsxir.get_multi_info(pid, :rows) + 1
   end
 
   @doc """
