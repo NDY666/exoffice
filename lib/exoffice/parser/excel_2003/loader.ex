@@ -193,7 +193,7 @@ defmodule Exoffice.Parser.Excel2003.Loader do
     # add cell
     case :ets.match(pid, {row, :"$1"}) do
       [[cells]] ->
-        :ets.insert(pid, {row, cells ++ [[column_string <> to_string(row), value]]})
+        :ets.insert(pid, {row, [[column_string <> to_string(row), value]] ++ cells})
 
       _ ->
         :ets.insert(pid, {row, [[column_string <> to_string(row), value]]})
@@ -218,7 +218,7 @@ defmodule Exoffice.Parser.Excel2003.Loader do
     # add cell
     case :ets.match(pid, {row, :"$1"}) do
       [[cells]] ->
-        :ets.insert(pid, {row, cells ++ [[column_string <> to_string(row), value]]})
+        :ets.insert(pid, {row, [[column_string <> to_string(row), value]] ++ cells})
 
       _ ->
         :ets.insert(pid, {row, [[column_string <> to_string(row), value]]})
@@ -241,7 +241,7 @@ defmodule Exoffice.Parser.Excel2003.Loader do
     # add cell
     case :ets.match(pid, {row, :"$1"}) do
       [[cells]] ->
-        :ets.insert(pid, {row, cells ++ [[column_string <> to_string(row), nil]]})
+        :ets.insert(pid, {row, [[column_string <> to_string(row), nil]] ++ cells})
 
       _ ->
         :ets.insert(pid, {row, [[column_string <> to_string(row), nil]]})
