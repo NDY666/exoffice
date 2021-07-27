@@ -149,7 +149,7 @@ defmodule Exoffice do
 
   """
   def count_rows(pid, parser) do
-    parser.count_rows(pid)
+    :ets.info(pid, :size)
   end
 
   # Keep the compatibility with using the first parameter as sheet number
